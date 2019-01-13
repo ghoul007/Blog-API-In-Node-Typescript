@@ -1,12 +1,12 @@
-const express = require('express');
+import * as express from 'express';
+import * as  mongoose from 'mongoose';
+import authRouter from './routers/auth';
+import categoryRouter from './routers/category';
+import * as config from 'config';
+import * as winston from 'winston';
+
 const server = express();
 const port = process.env.PORT || 3000
-const mongoose = require('mongoose');
-const authRouter = require('./routers/auth')
-const categoryRouter = require('./routers/category')
-const config = require('config')
-const winston = require('winston');
-
 process.on('unhandledRejection', (err) => {
     console.log('fff')
     winston.error('fff')
@@ -25,7 +25,7 @@ winston.handleExceptions(
 )
 server.use(express.json())
 
-mongoose.connect(config.get('db'), { useNewUrlParser: true }).then(
+mongoose.connect(config.get('db')).then(
     () => {
         winston.info('connect to mongodb with success')
     }

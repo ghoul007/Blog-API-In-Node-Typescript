@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
-const unique = require('mongoose-unique-validator')
-const joi = require("joi")
+import * as  mongoose from 'mongoose';
+import * as unique from 'mongoose-unique-validator';
+import * as joi from 'joi';
 
 
-const userScheme = mongoose.Schema({
+const userScheme = new mongoose.Schema({
     email: { type: String, require: true, unique: true },
     password: { type: String, require: true }
 })
 
 userScheme.plugin(unique)
 
-const validate = (user) => {
+export function validate(user){
     const schema = {
         email: joi.string().required(),
         password: joi.string().required()
@@ -19,5 +19,6 @@ const validate = (user) => {
     return joi.validate(user, schema)
 }
 
-module.exports.User = mongoose.model('User', userScheme)
-module.exports.validate = validate
+export default mongoose.model('User', userScheme)
+ 
+// module.exports.validate = validate

@@ -1,37 +1,37 @@
 
-const { Category, validate } = require('../models/category')
+import  Category  from '../models/category';
 require('express-async-errors')
 
-module.exports.saveCategory = async (req, res, next) => {
-        const { error } = validate(req.body)
-        if (error) return res.status(400).send('invalid data')
+export  async function saveCategory(req, res, next){
+        // const { error } = validate(req.body)
+        // if (error) return res.status(400).send('invalid data')
         const category = new Category({ name: req.body.name })
         const result = await category.save();
         res.status(200).json(result)
 }
 
-module.exports.getAllCategories = async (req, res, next) => {
+export async function getAllCategories(req, res, next){
         const categories = await Category.find();
         res.status(200).json(categories)
 }
 
-module.exports.getCategoryByID = async (req, res, next) => {
+export async function getCategoryByID(req, res, next) {
  
         const category = await Category.findById(req.params.id);
         if(!category) return res.status(404).send('not found')
         res.status(200).json(category)
 }
 
-module.exports.updateCategory = async (req, res, next) => {
-        const { error } = validate(req.body)
-        if (error) return res.status(400).send('invalid data')
+export async function updateCategory (req, res, next) {
+        // const { error } = validate(req.body)
+        // if (error) return res.status(400).send('invalid data')
         const category = await Category.findByIdAndUpdate(req.params.id, { name: req.body.name }, { new: true });
         if(!category) return res.status(404).send('not found')
         res.status(200).json(category)
 }
 
-module.exports.deleteCategory = async (req, res, next) => {
-        const category = await Category.findByIdAndDelete(req.params.id);
+export async function deleteCategory(req, res, next)  {
+        const category = await Category.findByIdAndRemove(req.params.id);
         if(!category) return res.status(404).send('not found')
         res.status(200).json(category)
 }

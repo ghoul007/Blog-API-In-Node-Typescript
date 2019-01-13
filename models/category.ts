@@ -1,7 +1,9 @@
-const mongoose = require('mongoose');
-const unique = require('mongoose-unique-validator');
-const joi = require('joi')
-categorySchema = mongoose.Schema({
+import * as  mongoose from 'mongoose';
+import * as unique from 'mongoose-unique-validator';
+import * as joi from 'joi';
+
+
+const categorySchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -20,5 +22,5 @@ const validate = (category) => {
     return joi.validate(category, schema)
 }
 
-module.exports.Category = mongoose.model('Category', categorySchema)
-module.exports.validate = validate
+export default mongoose.model('Category', categorySchema)
+// module.exports.validate = validate
