@@ -3,6 +3,7 @@ import User  from '../models/user';
 import * as  bcrypt from 'bcrypt';
 import * as  jwt from 'jsonwebtoken';
 import * as config from 'config';
+require('express-async-errors')
 
 export async function login(req, res, next){
         // const { error } = validate({ email: req.body.email, password: req.body.password })

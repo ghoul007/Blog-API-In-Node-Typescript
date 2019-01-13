@@ -39,6 +39,7 @@ var user_1 = require("../models/user");
 var bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
 var config = require("config");
+require('express-async-errors');
 function login(req, res, next) {
     return __awaiter(this, void 0, void 0, function () {
         var user, validPass, token;

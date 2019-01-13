@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "c",
+    "dev": "tsc && nodemon ./build/app.js",
+    "debug": "tsc && node --inspect-brk ./build/app.js",
     "start": "nodemon ./build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

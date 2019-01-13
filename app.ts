@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as  mongoose from 'mongoose';
 import authRouter from './routers/auth';
+import postRouter from './routers/post'
 import categoryRouter from './routers/category';
 import * as config from 'config';
 import * as winston from 'winston';
@@ -8,8 +9,8 @@ import * as winston from 'winston';
 const server = express();
 const port = process.env.PORT || 3000
 process.on('unhandledRejection', (err) => {
-    console.log('fff')
-    winston.error('fff')
+    console.log(err)
+    winston.error(err)
     process.exit(1)
     throw err
 })
@@ -25,7 +26,10 @@ winston.handleExceptions(
 )
 server.use(express.json())
 
-mongoose.connect(config.get('db')).then(
+mongoose.set('useCreateIndex', true)
+mongoose.set('useNewUrlParser', true)
+mongoose.connect(config.get('db'),{
+  }).then(
     () => {
         winston.info('connect to mongodb with success')
     }
@@ -33,11 +37,12 @@ mongoose.connect(config.get('db')).then(
 
 server.use('/api/category', categoryRouter)
 server.use('/api/user', authRouter)
+server.use('/api/post', postRouter)
 
 
-server.use('/', (req, res, next) => {
-    res.send('hello  world')
-})
+// server.use('/', (req, res, next) => {
+//     res.send('hello  world')
+// })
 
 // throw new Error('ff')
 // handler error

@@ -6,3 +6,45 @@
 {"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T09:57:13.143Z"}
 {"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T10:52:02.884Z"}
 {"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T15:15:50.206Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:07:17.979Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:10:10.756Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:12:48.607Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:14:01.709Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:16:33.247Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:21:51.640Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:22:39.693Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:26:02.338Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:26:57.337Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:27:17.224Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T16:27:55.453Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:39:28.693Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:41:08.022Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:44:08.613Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:45:37.696Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:48:02.813Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:49:24.168Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:50:49.945Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:51:04.390Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:55:27.320Z"}
+{"level":"error","message":"fff","timestamp":"2019-01-13T19:56:12.695Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:57:27.593Z"}
+{"message":"User validation failed: email: Error, expected `email` to be unique. Value: `ahmed@gmail.com`","errors":{"email":{"message":"Error, expected `email` to be unique. Value: `ahmed@gmail.com`","name":"ValidatorError","properties":{"message":"Error, expected `email` to be unique. Value: `ahmed@gmail.com`","type":"unique","path":"email","value":"ahmed@gmail.com"},"kind":"unique","path":"email","value":"ahmed@gmail.com"}},"_message":"User validation failed","stack":"ValidationError: User validation failed: email: Error, expected `email` to be unique. Value: `ahmed@gmail.com`\n    at new ValidationError (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/mongoose/lib/error/validation.js:30:11)\n    at model.Document.invalidate (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/mongoose/lib/document.js:2071:32)\n    at p.doValidate.skipSchemaValidators (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/mongoose/lib/document.js:1934:17)\n    at /home/ahmed/Desktop/BlogNodeJSTS/node_modules/mongoose/lib/schematype.js:929:9\n    at process._tickCallback (internal/process/next_tick.js:61:11)","name":"ValidationError","level":"error","timestamp":"2019-01-13T19:57:29.721Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T19:58:33.617Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:02:09.632Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:03:37.296Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:03:51.325Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:06:20.810Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:07:31.773Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:08:57.927Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:11:48.474Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:16:33.231Z"}
+{"message":"Post is not defined","stack":"ReferenceError: Post is not defined\n    at eval (eval at <anonymous> (/home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:62:25), <anonymous>:1:15)\n    at eval (eval at <anonymous> (/home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:62:25), <anonymous>:1:60)\n    at /home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:62:25\n    at step (/home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:32:23)\n    at Object.next (/home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:13:53)\n    at /home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:7:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:3:12)\n    at getPostByID (/home/ahmed/Desktop/BlogNodeJSTS/build/controllers/post.js:58:12)\n    at newFn (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/express/lib/router/route.js:137:13)\n    at exports.default (/home/ahmed/Desktop/BlogNodeJSTS/build/middleware/isValidObjectID.js:8:5)\n    at newFn (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/express-async-errors/index.js:16:20)\n    at Layer.handle [as handle_request] (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/ahmed/Desktop/BlogNodeJSTS/node_modules/express/lib/router/route.js:137:13)","level":"error","timestamp":"2019-01-13T20:23:24.274Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:24:03.698Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:25:46.212Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:29:21.734Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:30:28.241Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:31:23.402Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:32:06.300Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:43:46.894Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:46:57.771Z"}
+{"level":"info","message":"connect to mongodb with success","timestamp":"2019-01-13T20:47:23.939Z"}
